@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Dashboard</title>
+</head>
+<body>
+  {% if not logged_in %}
+    <h2>ברוכה הבאה! התחברי כדי לראות את השירים האחרונים שלך 🎵</h2>
+    <a href="/login">התחברות לספוטיפיי</a>
+  {% else %}
+    <h2>🎧 השירים האחרונים שלך:</h2>
+    <ul>
+      {% for t in tracks %}
+        <li>{{ t.name }} — {{ t.artist }} ({{ t.album }})</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</body>
+</html>
