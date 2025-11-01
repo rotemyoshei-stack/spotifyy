@@ -9,7 +9,7 @@ app.secret_key = os.getenv("FLASK_SECRET_KEY", "your_flask_secret_key_here")
 
 CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
 CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
-REDIRECT_URI = "https://your-app-name.onrender.com/callback"  # חשוב לעדכן לפי Render
+REDIRECT_URI = "https://spotifyy-zeta.vercel.app/"  # חשוב לעדכן לפי Render
 SCOPE = "user-read-recently-played"
 
 # --- דף הבית ---
@@ -52,3 +52,4 @@ def callback():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
